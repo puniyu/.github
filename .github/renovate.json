@@ -4,6 +4,7 @@
     "helpers:pinGitHubActionDigests",
     ":semanticCommits"
   ],
+  "rangeStrategy": "pin",
   "timezone": "Asia/Shanghai",
   "schedule": [
     "at any time"
