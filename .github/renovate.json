@@ -8,5 +8,19 @@
   "timezone": "Asia/Shanghai",
   "schedule": [
     "at any time"
+  ],
+  "packageRules": [
+    {
+      "groupName": "github actions",
+      "matchManagers": [
+        "github-actions"
+      ],
+      "schedule": [
+        "at any time"
+      ],
+      "labels": [
+        "dependencies"
+      ]
+    }
   ]
 }
