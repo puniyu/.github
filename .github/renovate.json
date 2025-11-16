@@ -64,6 +64,22 @@
       "automergeType": "pr"
     },
     {
+      "groupName": "tauri",
+      "matchDatasources": [
+        "crate",
+        "npm"
+      ],
+      "matchPackageNames": [
+        "tauri",
+        "tauri-build",
+        "@tauri-apps/**",
+        "tauri-plugin-**"
+      ],
+      "rangeStrategy": "auto",
+      "automerge": true,
+      "automergeType": "pr"
+    },
+    {
       "groupName": "rust crates",
       "matchDatasources": [
         "crate"
