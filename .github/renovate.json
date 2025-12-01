@@ -15,7 +15,7 @@
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": [
+      "managerFilePatterns": [
         "^rust-toolchain\\.toml?$"
       ],
       "matchStrings": [
