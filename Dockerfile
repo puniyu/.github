@@ -12,7 +12,8 @@ RUN apt-get update && apt-get install -y \
   libssl-dev \
   pkg-config \
   python3 \
-  ninja.build
+  ninja.build \
+  libfreetype6-dev 
 
 RUN curl -LsSf https://astral.sh/uv/install.sh | sh
 
