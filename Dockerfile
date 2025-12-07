@@ -7,6 +7,7 @@ RUN apt-get update && apt-get install -y \
   curl \
   build-essential \
   libfontconfig1-dev \
+  pkg-config \
   git \
   libssl-dev \
   pkg-config \
