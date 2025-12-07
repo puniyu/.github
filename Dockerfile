@@ -11,6 +11,7 @@ RUN apt-get update && apt-get install -y \
   git \
   libssl-dev \
   pkg-config \
+  python3 \
   ninja.build
 
 RUN curl -LsSf https://astral.sh/uv/install.sh | sh
