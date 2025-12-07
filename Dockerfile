@@ -1,6 +1,7 @@
 FROM debian:bullseye-slim
 
 RUN apt-get update && apt-get install -y \
+  llvm \
   clang \
   gcc \
   g++ \
@@ -9,7 +10,9 @@ RUN apt-get update && apt-get install -y \
   libfontconfig1-dev \
   libfreetype6-dev \
   pkg-config \
+  fontconfig \
   git \
+  openssl \
   libssl-dev \
   ninja-build
 
