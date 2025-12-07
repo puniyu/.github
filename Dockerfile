@@ -23,3 +23,6 @@ RUN uv python install 3.12
 
 RUN curl -fsSL https://deb.nodesource.com/setup_22.x | bash - \
     && apt-get install -y nodejs
+
+ENV SKIA_NINJA_COMMAND=/usr/bin/ninja \
+    PATH=/usr/local/bin:$PATH
