@@ -28,6 +28,12 @@
   ],
   "packageRules": [
     {
+      "matchPackageNames": [
+        "pnpm"
+      ],
+      "allowedVersions": "10.23.0"
+    },
+    {
       "groupName": "github actions",
       "matchManagers": [
         "github-actions"
