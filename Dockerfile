@@ -1,20 +1,18 @@
 FROM debian:bullseye-slim
 
-RUN apt-get update && apt-get install -y \
-  llvm \
-  clang \
-  gcc \
-  g++ \
-  curl \
+RUN apt-get update && apt install -y \
   build-essential \
-  libfontconfig1-dev \
-  libfreetype6-dev \
-  pkg-config \
-  fontconfig \
+  clang \
+  lld \
+  llvm \
+  ninja-build \
+  python3 \
   git \
-  openssl \
-  libssl-dev \
-  ninja-build
+  pkg-config \
+  libfreetype6-dev \
+  libfontconfig1-dev \
+  libexpat1-dev \
+  libpng-dev
 
 RUN curl -LsSf https://astral.sh/uv/install.sh | sh
 
