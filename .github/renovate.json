@@ -1,23 +1,14 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "helpers:pinGitHubActionDigestsToSemver",
-    ":semanticCommits"
-  ],
+  "extends": ["helpers:pinGitHubActionDigestsToSemver", ":semanticCommits"],
   "rangeStrategy": "bump",
   "timezone": "Asia/Shanghai",
-  "schedule": [
-    "at any time"
-  ],
-  "labels": [
-    "dependencies"
-  ],
+  "schedule": ["at any time"],
+  "labels": ["dependencies"],
   "customManagers": [
     {
       "customType": "regex",
-      "managerFilePatterns": [
-        "/^rust-toolchain\\.toml?$/"
-      ],
+      "managerFilePatterns": ["/^rust-toolchain\\.toml?$/"],
       "matchStrings": [
         "channel\\s*=\\s*\"(?<currentValue>\\d+\\.\\d+(\\.\\d+)?)\""
       ],
@@ -28,37 +19,27 @@
   ],
   "packageRules": [
     {
-      "matchPackageNames": [
-        "pnpm"
-      ],
+      "matchPackageNames": ["pnpm"],
       "allowedVersions": "10.23.0"
     },
     {
       "groupName": "github actions",
-      "matchManagers": [
-        "github-actions"
-      ],
+      "matchManagers": ["github-actions"],
       "rangeStrategy": "auto",
       "automerge": true,
       "automergeType": "pr"
     },
     {
       "groupName": "rust toolchain",
-      "matchManagers": [
-        "custom.regex"
-      ],
-      "matchDepNames": [
-        "rust"
-      ],
+      "matchManagers": ["custom.regex"],
+      "matchDepNames": ["rust"],
       "automerge": true,
-      "automergeType": "pr"
+      "automergeType": "pr",
+      "automergeSchedule": ["at any time"]
     },
     {
       "groupName": "napi",
-      "matchDatasources": [
-        "crate",
-        "npm"
-      ],
+      "matchDatasources": ["crate", "npm"],
       "matchPackageNames": [
         "napi",
         "napi-build",
@@ -71,10 +52,7 @@
     },
     {
       "groupName": "tauri",
-      "matchDatasources": [
-        "crate",
-        "npm"
-      ],
+      "matchDatasources": ["crate", "npm"],
       "matchPackageNames": [
         "tauri",
         "tauri-build",
@@ -87,16 +65,12 @@
     },
     {
       "groupName": "rust crates",
-      "matchDatasources": [
-        "crate"
-      ],
+      "matchDatasources": ["crate"],
       "rangeStrategy": "auto"
     },
     {
       "groupName": "node packages",
-      "matchDatasources": [
-        "npm"
-      ],
+      "matchDatasources": ["npm"],
       "rangeStrategy": "auto"
     }
   ]
