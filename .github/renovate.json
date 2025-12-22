@@ -23,6 +23,15 @@
       "allowedVersions": "10.23.0"
     },
     {
+      "matchPackageNames": ["@types/node"],
+      "allowedVersions": "24.1.0"
+    },
+    {
+      "matchDatasources": ["node-version"],
+      "matchDepNames": ["node"],
+      "allowedVersions": "24.12.0"
+    },
+    {
       "groupName": "github actions",
       "matchManagers": ["github-actions"],
       "rangeStrategy": "auto",
