@@ -5,6 +5,7 @@
   "timezone": "Asia/Shanghai",
   "schedule": ["at any time"],
   "labels": ["dependencies"],
+  "automergeStrategy": "squash",
   "customManagers": [
     {
       "customType": "regex",
