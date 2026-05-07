@@ -43,8 +43,7 @@
       "matchManagers": ["custom.regex"],
       "matchDepNames": ["rust"],
       "automerge": true,
-      "automergeType": "pr",
-      "automergeSchedule": ["at any time"]
+      "automergeType": "pr"
     },
     {
       "groupName": "napi",
